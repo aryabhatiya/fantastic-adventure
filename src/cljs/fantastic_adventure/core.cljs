@@ -3,10 +3,8 @@
 
 (enable-console-print!)
 
-(defonce app-state (atom {:text "Hello Chestnut!"}))
-
-(rum/defc greeting < rum/reactive []
-   [:h1 (:text (rum/react app-state))])
+(rum/defc greeting []
+  [:h1 "helloworld"])
 
 (defn render []
   (rum/mount (greeting) (. js/document (getElementById "app"))))

@@ -4,9 +4,10 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.671" :scope "provided"]
-                 [com.cognitect/transit-clj "0.8.300"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
+                 [org.clojure/clojurescript "1.9.908" :scope "provided"]
+                 [com.cognitect/transit-java "0.8.327"]
+                 [org.clojure/core.async "0.3.443"]
                  [ring "1.6.2"]
                  [ring/ring-defaults "0.3.1"]
                  [bk/ring-gzip "0.2.1"]
@@ -17,7 +18,10 @@
                  [org.danielsz/system "0.4.0"]
                  [org.clojure/tools.namespace "0.2.11"]
                  [http-kit "2.2.0"]
+                 [org.mindrot/jbcrypt "0.4"]
                  [rum "0.10.8"]
+                 [org.clojure/test.check "0.10.0-alpha2"]
+                 [com.datomic/datomic-free "0.9.5561.54" :exclusions [com.google.guava/guava]]
                  [lambdaisland/garden-watcher "0.3.1"]]
 
   :plugins [[lein-cljsbuild "1.1.6"]
@@ -57,7 +61,8 @@
                 :source-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
                 :compiler {:output-to "resources/public/js/compiled/testable.js"
                            :main fantastic-adventure.test-runner
-                           :optimizations :none}}
+                           :optimizations :none
+                           :process-shim false}}
 
                {:id "min"
                 :source-paths ["src/cljs" "src/cljc"]
