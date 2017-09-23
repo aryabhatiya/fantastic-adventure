@@ -1,4 +1,4 @@
-* fractals
+* fantastic-adventure
 ** Development
 
 Open a terminal and type `lein repl` to start a Clojure REPL
@@ -24,32 +24,6 @@ seconds., you're ready to go. Browse to `http://localhost:10555` and enjoy.
 
 Attention: It is not needed to run 'lein figwheel' separately. Instead '(go)'
 launches Figwheel directly from the REPL**
-
-** Trying it out
-
-If all is well you now have a browser window saying 'Hello Chestnut',
-and a REPL prompt that looks like `cljs.user=>`.
-
-Open `resources/public/css/style.css` and change some styling of the
-H1 element. Notice how it's updated instantly in the browser.
-
-Open `src/cljs/fractals/core.cljs`, and change `dom/h1` to
-`dom/h2`. As soon as you save the file, your browser is updated.
-
-In the REPL, type
-
-#+BEGIN_SRC clojurescript
-(ns fractals.core)
-(swap! app-state assoc :text "Interactivity FTW")
-#+END_SRC
-
-Notice again how the browser updates.
-
-*** Emacs/CIDER
-
-CIDER is able to start both a Clojure and a ClojureScript REPL simultaneously,
-so you can interact both with the browser, and with the server. The command to
-do this is `M-x cider-jack-in-clojurescript`.
 
 ** Testing
 
@@ -92,8 +66,7 @@ heroku open
 #+END_SRC
 
 *** Result
-| https://pacific-earth-90914.herokuapp.com/     |
-| https://git.heroku.com/pacific-earth-90914.git |
+
 
 
 *** Running with Foreman
