@@ -20,7 +20,8 @@
                  [http-kit "2.2.0"]
                  [org.mindrot/jbcrypt "0.4"]
                  [rum "0.10.8"]
-                 [org.clojure/test.check "0.10.0-alpha2"]
+;;                 [org.clojure/test.check "0.10.0-alpha2"]
+                 [org.clojure/test.check "0.9.0"]
                  [com.datomic/datomic-free "0.9.5561.54" :exclusions [com.google.guava/guava]]
                  [lambdaisland/garden-watcher "0.3.1"]]
 
